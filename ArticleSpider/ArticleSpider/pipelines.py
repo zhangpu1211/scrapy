@@ -7,13 +7,12 @@
 import codecs
 import json
 
-from scrapy.pipelines.images import ImagesPipeline
-from scrapy.exporters import JsonItemExporter
-from twisted.enterprise import adbapi
-from w3lib.html import remove_tags
-
 import MySQLdb
 import MySQLdb.cursors
+from scrapy.exporters import JsonItemExporter
+from scrapy.pipelines.images import ImagesPipeline
+from twisted.enterprise import adbapi
+
 
 class ArticlespiderPipeline(object):
     def process_item(self, item, spider):
